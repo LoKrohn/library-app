@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.library {
+    margin-top: 100px;
+    border: 8px solid rgb(198, 6, 6);
+    display: flex;
+}
+
+.book {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    width:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
