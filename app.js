@@ -33,27 +33,40 @@ function createBookCards () {
         const book = document.createElement('div');
             book.classList.add('book');
         const title = document.createElement('div');
-            title.classList.add('title');
+            title.classList.add('title', 'bookContent');
             title.textContent= library[i].title;
         const author = document.createElement('div');
-            author.classList.add('author');
+            author.classList.add('author', 'bookContent');
             author.textContent = library[i].author;
         const pages = document.createElement('div');
-            pages.classList.add('author');
+            pages.classList.add('author', 'bookContent');
             pages.textContent = `${library[i].pages} pages`;
-        const read = document.createElement("INPUT");
-            read.setAttribute("type","checkbox");
-        const readLabel = document.createElement('div');
-            readLabel.textContent = "Read?";      
+        const readBtn = document.createElement("button");
+            readBtn.textContent = "Read"; 
+            readBtn.classList.add('readBtn', 'bookContent');
+            readBtn.style.backgroundColor = 'green';
+            readBtn.addEventListener ('click', function() {
+                const color = event.target.style.backgroundColor
+                if (color === 'green') {
+                    event.target.style.backgroundColor = 'red';
+                    event.target.textContent = "Not Read";
+                } else {
+                    event.target.style.backgroundColor = 'green';
+                    event.target.textContent = "Read";
+                }
+            })
         
         container.appendChild(book);
         book.appendChild(title);
         book.appendChild(author);
         book.appendChild(pages);
-        book.appendChild(readLabel);
-        readLabel.appendChild(read);
+        book.appendChild(readBtn);
+
+    }
 }
-}
+
+
+
 
 createBookCards();
 
