@@ -11,12 +11,6 @@ const library = [
         "pages": "999",
         "read": true
         },
-    {
-        "title": "goofy movie",
-        "author": "don shmuck",
-        "pages": "69",
-        "read": false
-            }
     ];
 
 const resetBookCards = () => {
