@@ -10,10 +10,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-    <div class="header">LIBRARY</div>
+    <div class="header">
+        <div class="title">library app</div>
+        <button type="button" class="openButton" onclick="openForm()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+    </div>
+    <div class="formContainer" id="formContainer">
+        <form id="myForm">
+            <label for="bookTitle">Title</label>
+            <input type="text" id="bookTitle" name="bookTitle">
+            <label for="bookAuthor">Author</label>
+            <input type="text" id="bookAuthor" name="bookAuthor">
+            <label for="bookPages"> # of Pages</label>
+            <input type="number " id="bookPages" name="bookPages">
+            <label for="bookRead">Read?</label>
+            <input type="checkbox" id="bookRead" name="bookRead">
+            <input type="submit" value="Submit" id="submit">
+            <button type="button" class="closeButton" onclick="closeForm()">X</button>
+        </form>
+    </div>
     <div id="container">
-    </div>  
-</body>
+    </div>
+    <footer class="footer"> 
+        <div>Copyright © 2022  </div>
+        <div class="anim animate__animated"><a href="https://github.com/LoKrohn">&nbsp;LoKrohn&nbsp;</a></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></footer>  
+    </body>
 </html>
