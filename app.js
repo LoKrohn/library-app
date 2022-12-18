@@ -1,17 +1,4 @@
-const library = [
-    {
-        "title": "Sirens of Titan",
-        "author": "Kurt Vonnegut",
-        "pages": "666",
-        "read": true
-    },
-    {
-        "title": "Cat's Cradle",
-        "author": "Kurrt Vonnnegut",
-        "pages": "999",
-        "read": true
-        },
-    ];
+const library = [];
 
 const resetBookCards = () => {
     document.getElementById('container').innerHTML = '';
